@@ -124,7 +124,7 @@ video {
     width: 100%;
     height: calc(100% / 6);
     border: 2px solid #fff;
-    background-image: url("images/download.jpg");
+    background-image: url("../images/download.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: soft-light;
