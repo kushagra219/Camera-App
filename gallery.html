@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera App</title>
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+    <h1>Gallery</h1>
+    
+    <div class="container">
+        <!-- <div class="media-card">
+            <div class="media-container"></div>
+            <div class="action-container">
+                <button class="media-download">Download</button>
+                <button class="media-delete">Delete</button>
+            </div>
+        </div> -->
+        <div id="back">
+            <img src="https://img.icons8.com/flat-round/64/000000/back--v1.png"/>
+        </div>
+    </div>
+
+    <script src="js/dbScript.js"></script>
+    <script>
+        let backBtn = document.querySelector("#back");
+
+        backBtn.addEventListener("click", function(e) {
+            location.assign("index.html");
+        })
+
+        setTimeout(function() {
+            viewMedia();
+        }, 100)
+    </script>
+</body>
+</html>

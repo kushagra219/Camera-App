@@ -1,0 +1,143 @@
+/* css likhna sar dard hai */
+
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.video-container {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: black;
+}
+
+video {
+    height: 100%;
+    width: 100%;
+}
+
+#record, #capture {
+    position: fixed;
+    right: 4rem;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    background-color: black;
+    border: 5px solid #fff;
+    z-index: 3;
+}
+
+#record {
+    top: 40vh;
+}
+
+#capture {
+    top: 50vh;
+}
+
+#gallery {
+    position: absolute;
+    top: 75vh;
+    z-index: 3;
+    right: 5rem;
+    color: #fff;
+}
+
+#record:hover, #capture:hover, #gallery:hover {
+    cursor: pointer;
+}
+
+#record div, #capture div {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    margin: auto;
+}
+
+#record div {
+    background-color: red;
+}
+
+#capture div {
+    background-color: #fff;
+}
+
+.capture-animation {
+    animation: inOut 0.5s;
+}
+
+.record-animation {
+    animation: inOut 1s infinite;
+}
+
+@keyframes inOut {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+.zoom-container {
+    position: absolute;
+    top: 18vh;
+    right: 4.5rem;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    font-size: 48px;
+    background-color: rgb(87, 87, 87);
+    text-align: center;
+    z-index: 3;
+}
+
+#zoom-in, #zoom-out {
+    height: 3.5rem;
+    width: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+#zoom-in:hover, #zoom-out:hover {
+    cursor: pointer;
+}
+
+.filter-container {
+    position: fixed;
+    background-color: #fff;
+    height: 24rem;
+    width: 6rem;
+    left: 5rem;
+    top: calc((100vh - 24rem) / 2);
+    z-index: 3;
+}
+
+.filter {
+    width: 100%;
+    height: calc(100% / 6);
+    border: 2px solid #fff;
+    background-image: url("images/download.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: soft-light;
+}
+
+.filter:hover {
+    cursor: pointer;
+}
+
+.filter-div {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+}
+
